@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#7ed321"/>
+  <polygon points="200,50 280,150 200,250 120,150" fill="#ffffff" stroke="#333" stroke-width="2"/>
+  <circle cx="200" cy="150" r="30" fill="#e0e0e0"/>
+  <rect x="170" y="120" width="60" height="60" fill="#f0f0f0" stroke="#333" stroke-width="1"/>
+  <text x="200" y="270" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial">Pieza Industrial B</text>
+</svg>
