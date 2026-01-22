@@ -263,3 +263,49 @@ model-viewer {
 model-viewer.loaded {
     opacity: 1;
 }
+/* Agregar al final de style.css */
+
+/* Fix para model-viewer */
+model-viewer {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #f0f0f0;
+    border-radius: 10px;
+    --poster-color: #f0f0f0;
+}
+
+model-viewer.loaded {
+    background: transparent;
+}
+
+/* Asegurar que los controles estén visibles */
+.controls {
+    z-index: 100;
+    position: absolute;
+}
+
+/* Mejorar touch en móviles */
+@media (max-width: 768px) {
+    model-viewer {
+        touch-action: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+}
+
+/* Loading más visible */
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 50;
+}
+
+/* Asegurar que el modal tenga altura correcta */
+.viewer-container {
+    min-height: 400px;
+    position: relative;
+}
