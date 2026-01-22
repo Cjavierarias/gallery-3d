@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería 3D - Productos Industriales</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Galería de Productos Industriales</h1>
+        <p>Haz clic en cualquier producto para verlo en 3D</p>
+    </header>
+
+    <main class="gallery-container">
+        <div class="gallery-grid">
+            <!-- Producto 1 -->
+            <div class="product-card" data-model="assets/models/part_01.glb">
+                <img src="assets/images/part_01.jpg" alt="Pieza Industrial A" class="product-thumbnail">
+                <h3>Pieza Industrial A</h3>
+                <p>Tornillo de alta precisión</p>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="product-card" data-model="assets/models/part_02.glb">
+                <img src="assets/images/part_02.jpg" alt="Pieza Industrial B" class="product-thumbnail">
+                <h3>Pieza Industrial B</h3>
+                <p>Engranaje mecánico</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal del visor 3D -->
+    <div id="viewer-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Visor 3D</h2>
+            
+            <div class="viewer-container">
+                <model-viewer 
+                    id="model-viewer"
+                    src=""
+                    alt="Modelo 3D del producto"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="1"
+                    exposure="1"
+                    ar
+                    ar-modes="webxr scene-viewer quick-look"
+                    style="width: 100%; height: 100%;">
+                    
+                    <div class="loading" slot="progress-bar">
+                        <div class="loader"></div>
+                        <p>Cargando modelo 3D...</p>
+                    </div>
+                    
+                    <button slot="ar-button" class="ar-button">
+                        Ver en tu espacio
+                    </button>
+                    
+                    <div id="controls" class="controls">
+                        <button id="reset-camera" class="control-btn">Resetear vista</button>
+                        <button id="toggle-rotation" class="control-btn">Pausar rotación</button>
+                    </div>
+                </model-viewer>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Galería 3D Industrial - Desplegado en GitHub Pages</p>
+    </footer>
+
+    <script src="js/viewer.js"></script>
+</body>
+</html>
